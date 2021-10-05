@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch a Sketch</title>
+</head>
+<body>
+    <div class = "EtchASketchContainer">
+        <h1>ETCH A SKETCH</h1>
+    </div>
+
+    <div class = "container">
+        <div id="settingsDiv">
+            <input type="color" id='colorPicker' value='#333333'>
+            <button id="rainbowButton">Rainbow</button>
+            <button id ="blackButton">Black</button>
+            <button id="whiteButton">Eraser</button>
+            <button id="resetButton">Clear</button>
+            <form action="">Sketch Size</form>
+            <br>
+            <input type="range" id='userSelectedSize' min="20" max="80" class="slider">   
+            <span id='sliderOutput'></span>     
+        </div>
+            <div id = "gridContainer" class='gridContainer'></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  
+  body {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  
+#gridContainer>div {
+    box-sizing: border-box;
+}
+
+#colorPicker {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.gridContainerResetButton {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+} 
+
+#settingsDiv {
+    display: flex;
+    flex-flow: column;
+    padding: 50px 0px 20px 0px;
+}
+
+#settingsDiv>button {
+    padding: 15px 25px 15px 25px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(136, 173, 206);
+    color: white;
+}
+
+#gridContainer {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 0px 15px 0px rgb(148, 148, 148);
+}
+
+.EtchASketchContainer {
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+}
+
+.resetButtonDiv {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+#settingsDiv>button:hover {
+    transition: .1s;;
+    box-shadow: 2px 2px 10px 0px rgb(51, 99, 141);
+    background-color: rgb(51, 99, 141);
+}
+
+#settingsDiv>button:focus {
+    background-color: rgb(51, 99, 141);
+}
+
+
+h1 {
+    margin: 10px 0px 50px 0px;
+}
+  
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+  
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+}
