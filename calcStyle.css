@@ -8,6 +8,17 @@
     margin-bottom: 50px;
 }
 
+.websiteMenu {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-emphasis: none;
+    text-decoration: none;
+    color: rgb(37, 58, 104);
+}
+
 #calculatorContainer {
     display: flex;
     margin: auto;
