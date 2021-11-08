@@ -12,15 +12,20 @@
         <h1><a href="index.html">Etch A Sketch</a></h1>
         <h1><a href="tictactoe.html">Tic Tac Toe</a></h1>
     </div>
-
-    <header id='header'></header>
+    
+    <header id='header'>CALCULATOR</header>
 
 
     <div id='calculatorContainer'>
         <div id='displayContainer'>
-            <span id='output'></span>
+            <div id='ongoingCalculation'></div>
+            <div id='output'></div>
         </div>
-        <div id='buttonAndOperationsContainer'>
+        <div id='clearAndDeleteButtons'>
+            <div id='clearButton'>CLEAR</div>
+            <div id='deleteButton'>DELETE</div>
+        </div>
+        <div id='buttonAndOperationsContainer'>   
             <div id='buttonContainer'>              
                 <div id='sevenButton'>7</div>
                 <div id='eightButton'>8</div> 
@@ -31,10 +36,11 @@
                 <div id='oneButton'>1</div>
                 <div id='twoButton'>2</div>
                 <div id='threeButton'>3</div>
+                <div id='blankDiv'></div>
                 <div id='zeroButton'>0</div>
-                <!-- <div id='periodButton'>.</div> -->
-                <div id='clearButton'>Clear</div>
+                <div id='periodButton'>.</div>
             </div>
+
             <div id='operationButtonContainer'>
                     <div id='divideButton'>/</div>
                     <div id='subtractButton'>-</div>
@@ -45,7 +51,10 @@
         </div>
     </div>
 
-
     <script src="calcScript.js"></script>
 </body>
+<footer>
+    <p id='footerText'>Justin Martin</p>
+    <p>Created as part of The Odin Project</p>
+</footer>
 </html>

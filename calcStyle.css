@@ -1,11 +1,16 @@
 * {
-    font-family: sans-serif;
-}
-
-#header {
-    height: 50px;
-    background-color: rgb(37, 58, 104);
-    margin-bottom: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+    --primary-color: #414656;
+    --delete-color: #E54771;
+    --delete-color-text: white;
+    --numbers-color: #E4F0FF;
+    --numbers-color-text: #414656;
+    --operation-color: #00C9E7;
+    --clear-color: #00C9E7;
+    --clear-color-text: white;
+    --operation-color-text: white;
+    margin: 0;
 }
 
 .websiteMenu {
@@ -16,43 +21,96 @@
 a {
     text-emphasis: none;
     text-decoration: none;
-    color: rgb(37, 58, 104);
+    color: white;
+}
+
+
+#header {
+    height: 100px;
+    background-color: #414656;
+    margin-bottom: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vh;
+}
+
+#clearButton {
+    flex: 1;
+    background-color:var(--clear-color);
+    color: var(--clear-color-text);
+    border-radius: 15px;
+    font-size:150%;
+    font-weight: bold;
+    padding: 15px 10px;
+    margin: 5px 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#deleteButton {
+    flex: 1;
+    background-color:var(--delete-color);
+    color: var(--delete-color-text);
+    border-radius: 15px;
+    font-size:150%;
+    font-weight: bold;
+    padding: 15px 10px;
+    margin: 5px 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 9%;
+}
+
+#clearAndDeleteButtons {
+    padding-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: .75;
 }
 
 #calculatorContainer {
     display: flex;
     margin: auto;
     min-width: 300px;
-    width: 35vw;
+    width: 30vw;
     height: 45vw;
-    max-height: 1100px;
-    max-width: 850px;
-    min-height: 400px;
+    max-height: 700px;
+    max-width: 450px;
+    min-height: 450px;
     box-sizing: border-box;
-    background-color: rgb(61, 83, 116);
-    padding: 1.5% 1.5%;
+    background-color: var(--primary-color);
+    padding: .75% .75%;
     flex-wrap: wrap;
     border-radius: 20px;
     flex-direction: column;
 }
 
-
 #buttonAndOperationsContainer {
     display: flex;
     box-sizing: border-box;
     flex: 4;
-    padding-top: 15px;
+    padding-top: 1%;
+    padding-bottom: -1%;
 }
 
 #displayContainer {
     display: flex;
     background-color: white;
     flex: 1;
-    max-height: 160px;
-    padding-right: 5%;
-    justify-content: flex-end;
-    align-items: center;
+    padding-right: 4%;
+    justify-content: center;
+    align-items: flex-end;
     border-radius: 15px;
+    flex-direction: column;
+}
+
+#displayContainer >div {
+margin: 5px 0px;
 }
 
 #output {
@@ -74,9 +132,8 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color:#F0DD77;
-    border:rgb(61, 83, 116) solid 1px;
-    color: white;
+    background-color:var(--operation-color);
+    color: var(--operation-color-text);
     border-radius: 15px;
     margin-bottom: 8px;
     font-size: 250%;
@@ -87,32 +144,44 @@ a {
     cursor: pointer;
     user-select: none;
     background-color: white;
-    color: #F0DD77;
+    color: #00D7FF;
+}
+
+#buttonContainer > #blankDiv {
+    background-color: var(--primary-color);
 }
 
 #buttonContainer > div {
-    flex-basis: 30%;
+    flex-basis: 31%;
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #6F84A8;
-    color: #DEF1FF;
-    border:rgb(61, 83, 116) solid 1px;
+    background-color: var(--numbers-color);
+    color: var(--numbers-color-text);
     border-radius: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size:250%;
     font-weight: bold;
 }
 
-#clearButton {
-    padding: 0px 10px 0px 10px;
-    font-size: 20px !important;
+#clearButton:hover {
+    cursor: pointer;
+    user-select: none;
+    background-color: #48e5ff;
+    color: white;
+}
+
+#deleteButton:hover {
+    cursor: pointer;
+    user-select: none;
+    background-color: #ff4f84;
+    color: white;
 }
 
 #buttonContainer > div:hover {
     cursor: pointer;
     user-select: none;
-    background-color: #576c8f;
+    background-color: #48e5ff;
     color: white;
 }
 
@@ -123,4 +192,42 @@ a {
     flex-direction: row;
     justify-content: space-around;
     padding-right: 10px;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    background-color: #414656;
+    color: white;
+    text-align: center;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+#footerText {
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 1250px) {
+    #calculatorContainer {
+        padding: 1.5%;
+    }
+}
+@media screen and (max-width: 650px) {
+    #calculatorContainer {
+        padding: 3.5%;
+    }
+    #header {
+        margin-bottom: 25px;
+    }
+    footer {
+        height: 50px;
+    }
+    #footerText{
+        margin-top: 10px;
+    }
 }
